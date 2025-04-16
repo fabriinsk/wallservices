@@ -1,11 +1,13 @@
 {
-    "version": 2,
-    "builds": [
-      { "src": "api/sendMessage.js", "use": "@vercel/node" },
-      { "src": "index.html", "use": "@vercel/static" }
-    ],
-    "routes": [
-      { "src": "/api/sendMessage", "dest": "/api/sendMessage.js" },
-      { "src": "/(.*)", "dest": "/index.html" }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    { "src": "api/sendMessage.js", "use": "@vercel/node" },
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "style.css", "use": "@vercel/static" },
+    { "src": "script.js", "use": "@vercel/static" }
+  ],
+  "rewrites": [
+    { "source": "/api/sendMessage", "destination": "/api/sendMessage.js" },
+    { "source": "/", "destination": "/index.html" }
+  ]
+}

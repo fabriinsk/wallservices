@@ -1,129 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WallServices - Soluções Digitais</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #ffffff;
-      color: #111;
-    }
-
-    header {
-      background-color: #000;
-      color: #fff;
-      padding: 20px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    header img {
-      height: 40px;
-    }
-
-    main {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.2em;
-      max-width: 600px;
-      margin: 0 auto 30px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #000;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #333;
-    }
-
-    .form-container {
-      max-width: 600px;
-      margin: 50px auto;
-      text-align: left;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1em;
-    }
-
-    form button {
-      background-color: #000;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      font-weight: bold;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    form button:hover {
-      background-color: #333;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f2f2f2;
-      color: #555;
-      font-size: 0.9em;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Serviços de Web Design</title>
+    <link rel="stylesheet" href="style.css"> <!-- Vinculando o CSS -->
 </head>
 <body>
-
-  <header>
-    <img src="logo.png" alt="WallServices Logo">
+    <header>
+        <h1>Bem-vindo aos Meus Serviços de Web Design</h1>
+    </header>
     <nav>
-      <a href="#servicos" class="btn">Serviços</a>
+      
     </nav>
-  </header>
-
-  <main>
-    <h1>Impulsione sua presença digital com a WallServices</h1>
-    <p>Desenvolvimento de sites, sistemas e soluções sob medida para o seu negócio. Tenha uma presença profissional na internet com tecnologia moderna e suporte dedicado.</p>
-    <a href="#contato" class="btn">Solicite um orçamento</a>
-
-    <div class="form-container" id="contato">
-      <h2>Entre em contato</h2>
-      <form action="https://formsubmit.co/wallservicesdev@gmail.com" method="POST">
-        <input type="text" name="nome" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu e-mail" required>
-        <textarea name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
-  </main>
-
-  <footer>
-    © 2025 WallServices - Todos os direitos reservados.
-  </footer>
-
+    <section id="servicos">
+        <h2>Serviços</h2>
+        <p>Ofereço serviços de web design personalizados, incluindo:</p>
+        <ul>
+            <li>Criação de sites responsivos</li>
+            <li>Design moderno e intuitivo</li>
+            <li>Otimização para SEO</li>
+            <li>Integração com sistemas e APIs</li>
+        </ul>
+    </section>
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <form id="contactForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Meus Serviços de Web Design. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script> <!-- Vinculando o JavaScript -->
 </body>
 </html>

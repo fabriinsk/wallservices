@@ -24,10 +24,10 @@ document.body.innerHTML = `
 
   <section id="contato">
     <h2>Contato</h2>
-    <form id="formContato">
-      <input type="text" name="nome" placeholder="Seu nome" required />
-      <input type="email" name="email" placeholder="Seu e-mail" required />
-      <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+    <form id="contactForm">
+      <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+      <input type="email" id="email" name="email" placeholder="Seu e-mail" required />
+      <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" required></textarea>
       <button type="submit">Enviar</button>
     </form>
     <p id="statusMsg"></p>
@@ -38,27 +38,21 @@ document.body.innerHTML = `
   </footer>
 `;
 
-document.getElementById('formContato').addEventListener('submit', async function (e) {
-  e.preventDefault();
+const script = document.createElement('script');
+script.src = './script.js';
+document.body.appendChild(script);
 
-  const formData = new FormData(this);
-  const data = {
-    nome: formData.get('nome'),
-    email: formData.get('email'),
-    mensagem: formData.get('mensagem'),
-  };
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita o envio padrão do formulário
 
-  const res = await fetch('/api/sendMessage', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  });
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const mensagem = document.getElementById('mensagem').value;
 
-  const msg = document.getElementById('statusMsg');
-  if (res.ok) {
-    msg.textContent = 'Mensagem enviada com sucesso!';
-    this.reset();
-  } else {
-    msg.textContent = 'Erro ao enviar. Tente novamente.';
-  }
+    if (nome && email && mensagem) {
+        alert('Formulário enviado com sucesso!');
+        // Aqui você pode adicionar lógica para enviar os dados para um servidor
+    } else {
+        alert('Por favor, preencha todos os campos.');
+    }
 });

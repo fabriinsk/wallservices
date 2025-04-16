@@ -1,0 +1,22 @@
+name: Deploy to Vercel
+on:
+  push:
+    branches:
+      - main  # Ou qualquer branch que você esteja utilizando
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # Versão do Node.js que você está utilizando
+      - name: Install dependencies
+        run: npm install
+      - name: Run build
+        run: npm run build  # Comando que gera o build do seu projeto
+      - name: Deploy to Vercel
+        run: vercel --prod  # Comando para enviar o código para o Vercel
