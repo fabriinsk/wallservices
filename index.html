@@ -1,46 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Serviços de Web Design</title>
-    <link rel="stylesheet" href="style.css"> <!-- Vinculando o CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clientes – [Fabricio]</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+    section {
+      padding: 2rem;
+    }
+    .portfolio, .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .project, .testimonial {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1rem;
+      max-width: 300px;
+      text-align: center;
+    }
+    .project img {
+      max-width: 100%;
+      border-radius: 4px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo aos Meus Serviços de Web Design</h1>
-    </header>
-    <nav>
-      
-    </nav>
-    <section id="servicos">
-        <h2>Serviços</h2>
-        <p>Ofereço serviços de web design personalizados, incluindo:</p>
-        <ul>
-            <li>Criação de sites responsivos</li>
-            <li>Design moderno e intuitivo</li>
-            <li>Otimização para SEO</li>
-            <li>Integração com sistemas e APIs</li>
-        </ul>
-    </section>
-    <section id="contato">
-        <h2>Entre em Contato</h2>
-        <form id="contactForm">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-            
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-    <footer>
-        <p>&copy; 2025 Meus Serviços de Web Design. Todos os direitos reservados.</p>
-    </footer>
-    <script src="script.js"></script> <!-- Vinculando o JavaScript -->
+
+  <header>
+    <h1>Clientes & Projetos</h1>
+    <p>Conheça alguns dos meus trabalhos como web designer</p>
+  </header>
+
+  <section>
+    <h2>Portfólio</h2>
+    <div class="portfolio">
+      <div class="project">
+        <img src="projeto1.jpg" alt="Projeto 1" />
+        <h3>Projeto 1</h3>
+        <p>Descrição breve do projeto.</p>
+        <a href="https://www.projeto1.com.br" target="_blank">Ver site</a>
+      </div>
+      <!-- Adicione mais projetos conforme necessário -->
+    </div>
+  </section>
+
+  <section>
+    <h2>Depoimentos</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"Excelente profissional! O site ficou incrível e super funcional."</p>
+        <strong>Cliente A</strong>
+      </div>
+      <!-- Adicione mais depoimentos conforme necessário -->
+    </div>
+  </section>
+
+  <footer>
+    <p>Entre em contato: <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></p>
+  </footer>
+
 </body>
 </html>
